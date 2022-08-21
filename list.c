@@ -128,24 +128,31 @@ void * popFront(List * list) {
 }
 
 void * popBack(List * list) {
-  if(list->current->prev != NULL){
-    list->current->prev->next = list->current->next;
-  }else{
-    list->head = list->current->next;
-    }
-  
-  if(list->current->next != NULL){
-    list->current->next->prev = list->current->prev;
-  }else{
-    list->current->prev->next = NULL;
-    list->tail = list->current->prev;
-  }
-  
-  return list->current->data;
+    list->current = list->tail;
+    return popCurrent(list);
 }
 
 void * popCurrent(List * list) {
+  if(list->head == NULL){
     return NULL;
+  }
+  void * datoEliminado = list->current->data;
+  if(list->current==list->tail){
+    list->current = list->current->prev;
+    list->current->next = NULL;
+    list->tail = list->current;
+  }
+  if(list->current==list->head){
+    list->current = list->current->next;
+    list->current->prev = NULL;
+    list->head = list->current;
+  }
+  if(list->current->prev!=NULL && list->current->next!=NULL){
+    list->current->prev->next = list->current->next; 
+    list->current->next->prev = list->current->prev;
+    list->current = list->current->next;
+  }
+    return datoEliminado;
 }
 
 void cleanList(List * list) {
