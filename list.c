@@ -41,7 +41,10 @@ void * firstList(List * list) {
   list->current=nodo;
   int * dato;
   dato=nodo->data;
-    return dato;
+  if (list->head==NULL){
+    return NULL;
+  }
+  return dato;
 }
 
 void * nextList(List * list) {
