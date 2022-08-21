@@ -97,8 +97,8 @@ void * prevList(List * list) {
      dato=nodo->data;
      return dato;
   }
+ }
 }
-
 void pushFront(List * list, void * data) {
 }
 
