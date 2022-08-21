@@ -63,3 +63,30 @@ Sun 21 Aug 2022 03:04:26 AM UTC:
  tests:  6|4
 total_score: 25/70
 da90f7c
+Sun 21 Aug 2022 03:08:10 AM UTC: 
+ list.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+test.c: In function ‘prevList’:
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:127:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+  127 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+list.c:118:8: error: ‘popBack’ defined but not used [-Werror=unused-function]
+  118 | void * popBack(List * list) {
+      |        ^~~~~~~
+list.c:105:6: error: ‘pushBack’ defined but not used [-Werror=unused-function]
+  105 | void pushBack(List * list, void * data) {
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+00a00a3

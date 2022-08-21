@@ -82,7 +82,21 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
+  if(list->current==NULL){
     return NULL;
+  }
+  else{
+    Node * nodo;
+    nodo=list->current->prev;
+    list->current=nodo;
+    if(list->current==NULL){
+      return NULL;
+    }
+    else{
+     int * dato;
+     dato=nodo->data;
+     return dato;
+  }
 }
 
 void pushFront(List * list, void * data) {
