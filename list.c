@@ -42,10 +42,11 @@ void * firstList(List * list) {
   if (list->head==NULL){
     return NULL;
   }
-  else
+  else{
     int * dato;
     dato=nodo->data;
     return dato;
+  }
 }
 
 void * nextList(List * list) {
