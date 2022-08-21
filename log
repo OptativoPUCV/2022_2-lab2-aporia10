@@ -113,3 +113,14 @@ list.c:104:13: error: ‘nodo’ is used uninitialized in this function [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 0a26104
+Sun 21 Aug 2022 03:22:57 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+test.c: In function ‘pushFront’:
+list.c:104:13: error: ‘nodo’ is used uninitialized in this function [-Werror=uninitialized]
+  104 |   nodo->data=data;
+      |   ~~~~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+72f0b12
