@@ -194,3 +194,13 @@ list.c:132:13: error: expected identifier before ‘==’ token
       |             ^~
 Compilation failed
 12d7734
+Mon 22 Aug 2022 01:45:12 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:126:20: error: expected identifier before ‘=’ token
+  126 |     list->current->=nodo->next;
+      |                    ^
+Compilation failed
+dad07ab
