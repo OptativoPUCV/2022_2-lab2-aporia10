@@ -210,3 +210,15 @@ Mon 22 Aug 2022 01:45:33 AM UTC:
  tests:  10|2
 total_score: 45/70
 665d020
+Mon 22 Aug 2022 01:45:55 AM UTC: 
+ list.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+list.c:131:3: error: expected identifier or ‘(’ before ‘if’
+  131 |   if(nodo->next == NULL){
+      |   ^~
+list.c:134:1: error: expected identifier or ‘(’ before ‘}’ token
+  134 | }
+      | ^
+Compilation failed
+db258f2
